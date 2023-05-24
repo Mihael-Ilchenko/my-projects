@@ -1,0 +1,15 @@
+.todoList {
+    div {
+        margin-left: auto;
+    }
+    span {
+        padding-right: 15px;
+    }
+    div>*:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+.item_success {
+    background-color: rgb(8, 255, 8);
+}
