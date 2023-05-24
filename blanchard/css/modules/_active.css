@@ -1,0 +1,50 @@
+.burger--active {
+  transform: none;
+}
+
+.menu-btn-elem-one--active {
+  width: 88%;
+  transform: rotate(45deg);
+}
+
+.menu-btn-elem-two--active {
+  opacity: 0;
+}
+
+.menu-btn-elem-three--active {
+  width: 88%;
+  transform: rotate(-45deg);
+}
+
+.search--active {
+  transform: none;
+}
+
+.artists__dropdown--active {
+  visibility: visible;
+  transform: none;
+}
+
+.accordion-tabs-item--active {
+  display: block;
+  animation-name: fadeIn;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+.accordion__link--active {
+  color: #7943a4;
+}
+.modal-overlay--active {
+  opacity: 1;
+  visibility: visible;
+  overflow-y: auto;
+}
+.overflow-hidden {
+  overflow-y: hidden;
+}
+.modal--active {
+  display: flex;
+  transform: none;
+  animation-name: fadeIn;
+}
