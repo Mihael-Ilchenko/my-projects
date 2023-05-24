@@ -1,0 +1,28 @@
+.form-inner {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+}
+
+.found-list {
+  position: absolute;
+  top: calc(100%);
+  width: 100%;
+  z-index: 5;
+  background-color: var(--color-white);
+  padding: 10px 15px;
+}
+
+.found-list__link {
+  display: block;
+}
+
+
+.found-list__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+
+.hide {
+  display: none;
+}

@@ -1,0 +1,24 @@
+.modal-content-delete {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 22px 85px 27px 85px; */
+}
+
+.modal__descr {
+  margin: 0;
+  margin-bottom: 25px;
+  text-align: center;
+  line-height: 19px;
+  max-width: 275px;
+}
+
+.modal__cancel {
+ display: block;
+}
+
+.modal__delete {
+ margin-bottom: 5px;
+  padding: 12px 35px;
+  background-color: var(--color-heliotrope);
+}

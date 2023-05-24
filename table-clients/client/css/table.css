@@ -1,0 +1,149 @@
+.clients {
+  position: relative;
+  top: 130px;
+}
+
+.clients__wrapper {
+  margin-bottom: 40px;
+  overflow: auto;
+}
+
+.clients__title {
+  margin: 0;
+  margin-bottom: 18px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.clients__table {
+  width: 100%;
+  font-size: 14px;
+  min-width: 728px;
+}
+
+th {
+  font-weight: 400;
+  padding: 0;
+}
+.clients__str-thead {
+  display: flex;
+  align-items: flex-end;
+  padding: 8px 20px;
+}
+
+.clients__tbody {
+  position: relative;
+}
+.cell-thead {
+  display: inline-block;
+  font-size: 12px;
+  color: var(--color-silver-chalice);
+}
+
+.sort--active {
+  transform-origin: center;
+  transform: rotate(180deg);
+}
+
+.arrow-svg {
+  display: inline-block;
+  margin-left: 3px;
+  transition: transform 0.2s linear;
+}
+.arrow-svg path {
+transition:  fill .1s linear;
+}
+.thead-button {
+  color: inherit;
+  transition: color .1s linear;
+}
+.thead-button:hover > span,
+.thead-button:hover {
+  color: #b89eff;
+}
+
+.thead-button:hover > span {
+  transition: color .1s linear;
+}
+
+.thead-button:hover > span .arrow-svg path,
+.thead-button:hover > .arrow-svg path {
+  fill: #b89eff;
+}
+.thead-button:focus-visible:not(:active):not(:hover) {
+  outline: 2px solid var(--color-heliotrope);
+  outline-offset: 3px;
+}
+
+.data-change-span,
+.data-create-span {
+  display: inline-block;
+}
+.thead__name-span {
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: left center;
+}
+
+.name-span,
+.thead-button-id {
+  text-transform: uppercase;
+  color: var(--color-heliotrope);
+  font-size: 10px;
+}
+
+.str-thead-info__id {
+  text-align: left;
+  min-width: 90px;
+  margin-right: 15px;
+}
+.str-thead-info__name {
+  text-align: left;
+  white-space: nowrap;
+  width: 29%;
+  min-width: 170px;
+  margin-right: 30px;
+}
+.str-thead-info__data-creat,
+.str-thead-info__data-change {
+  text-align: left;
+  width: 16%;
+  margin-right: 10px;
+}
+.str-thead-info__contacts {
+  margin-right: 8%;
+}
+.thead__id-span {
+  display: inline-block;
+}
+.clients__button {
+  display: flex;
+  justify-content: baseline;
+  border: none;
+  border: 1px solid currentColor;
+  color: var(--color-heliotrope);
+  font-weight: 600;
+  padding: 14px 27px;
+  transition: transform 0.1s linear, background-color 0.2s linear, color 0.2s;
+  margin: 0 auto;
+}
+
+.clients__button:active {
+  transform: scale(95%);
+}
+.button__svg {
+  text-align: center;
+  margin-right: 10px;
+}
+
+.clients__button:hover {
+  border-color: transparent;
+  color: var(--color-white);
+  background-color: var(--color-heliotrope);
+}
+.clients__button:focus-visible {
+  outline: none;
+  border-color: transparent;
+  color: var(--color-white);
+  background-color: var(--color-heliotrope);
+}

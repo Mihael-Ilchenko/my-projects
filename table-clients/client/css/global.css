@@ -1,0 +1,153 @@
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans-Regular"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans-SemiBold"),
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans-Bold"),
+    url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+:root {
+  --color-mercury: #e5e5e5;
+  --color-heliotrope: #9873ff;
+  --color-heliotrope-darker: #8052ff;
+  --color-silver-chalice: #b0b0b0;
+  --color-white: #ffffff;
+  --color-fiolet: #b89eff;
+  --color-grey: #c8c5d1;
+  --color-grey-darker: #E7E5EB;
+  --color-black-333: #333333;
+  --time-anim: 0.1s ease-in-out;
+  --burnt-sienna: #F06A4D;
+}
+
+/* global */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'OpenSans';
+  margin: 0;
+  background-color: var(--color-mercury);
+}
+a {
+  text-decoration: none;
+}
+.btn {
+  cursor: pointer;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px 20px;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: auto;
+  transform: translate(-50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .2s linear, visibility .2s linear;
+  padding: 7px 15px;
+  background: var(--color-black-333);
+  color: var(--color-white);
+  font-size: 12px;
+  z-index: 1;
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  transform: translateX(-50%);
+  clip-path: polygon(100% 0, 0 0, 51% 100%);
+  background: var(--color-black-333);
+}
+
+.modal-error {
+  transform: translateX(1000%);
+  transform-origin: right;
+  position: fixed;
+  right: 5%;
+  bottom: 5%;
+  z-index: 5;
+  transition: opacity 1s linear, transform .5s linear;
+}
+.modal-error__content {
+  
+  display: flex;
+  flex-direction: column;
+  background: var(--color-white);
+  padding: 15px 25px;
+  max-width: 500px;
+
+  border: 1px solid var(--color-heliotrope-darker);
+  border-radius: 10px;
+}
+.modal-error__text {
+  white-space: wrap;
+  font-size: 14px;
+  line-height: 150%;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0 10px 10px;
+  border-bottom: 1px solid var(--color-heliotrope-darker);
+}
+.modal-error__exit {
+  align-self: center;
+  padding: 15px 25px;
+  border-radius: 10px;
+  color: var(--color-white);
+  background-color: var(--color-heliotrope-darker)
+}
+.modal-error__exit:hover {
+  background-color: var(--color-heliotrope);
+}
