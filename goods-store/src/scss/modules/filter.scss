@@ -1,0 +1,312 @@
+.filter {
+  align-self: flex-start;
+  color: $dove-gray;
+  &__title {
+    font-size: $main-fz + 2px;
+    margin-bottom: 22px;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    border: none;
+  }
+
+  &__field:not(:last-child) {
+    margin-bottom: 28px;
+  }
+
+  &__group {
+    line-height: 130%;
+    margin-bottom: 9px;
+    font-weight: 600;
+  }
+
+  &__label {
+    position: relative;
+    align-items: center;
+    display: flex;
+  }
+
+  &__label:not(:last-child) {
+    margin-bottom: 14px;
+  }
+
+  &__input {
+    margin-right: 18px;
+  }
+
+  .custom-check {
+    width: 20px;
+    height: 20px;
+
+    &::before {
+      width: 7px;
+      height: 13px;
+      left: 55%;
+    }
+  }
+}
+
+.price {
+  &__group {
+    margin-bottom: 6px;
+  }
+
+  &__label {
+    text-transform: lowercase;
+  }
+
+  &__from-to {
+    margin-bottom: 9px;
+  }
+
+  &__row {
+    @include flexBox();
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+  }
+
+  &__input {
+    border: none;
+    padding: 0;
+    width: 86px;
+    margin-left: 5px;
+    color: inherit;
+    border: 1px solid $dusty-gray;
+    border-radius: 2px;
+    padding: 5px 13px;
+    height: 30px;
+  }
+
+  &__customizable {
+    position: relative;
+  }
+
+  .noUi-target {
+    height: 3px;
+    border: none;
+    background-color: $allery;
+  }
+
+  .noUi-connect {
+    background-color: $medium-purple;
+    position: relative;
+  }
+
+  .noUi-horizontal .noUi-handle {
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    top: -100%;
+    width: 13px;
+
+    &::after {
+      display: none;
+    }
+    &::before {
+      background: transparent;
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 13px solid $medium-purple;
+      border-radius: 3px;
+      left: -10px;
+      top: 0;
+    }
+  }
+}
+
+.filter-tablet {
+  .catalog-title--tablet {
+    margin-bottom: 15px;
+  }
+
+  &__title {
+    font-size: 14px;
+    line-height: 130%;
+    margin-right: 9px;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: auto repeat(4, 1fr);
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 12px;
+  }
+  &__group {
+    position: relative;
+    border: none;
+  }
+
+  &__label {
+    position: relative;
+    line-height: 124%;
+  }
+
+  &__subtitle {
+    width: 100%;
+  }
+
+  &__input {
+    margin-right: 20px;
+    color: inherit;
+  }
+
+  &__price-label {
+    @include flexBox;
+    justify-content: flex-start;
+    text-transform: lowercase;
+  }
+
+  &__price-input {
+    border: 1px solid $dusty-gray;
+    max-width: 86px;
+    padding: 5px 13px;
+    margin-left: 10px;
+    color: inherit;
+  }
+
+  .custom-check {
+    width: 20px;
+    height: 20px;
+    &::before {
+      left: 55%;
+      width: 6px;
+      height: 13px;
+    }
+  }
+
+  &__btn {
+    position: relative;
+    width: 100%;
+    text-align: left;
+    border: 2px solid transparent;
+    border-radius: $size-radius;
+    background-color: $alabaster;
+    padding: 9px 15px;
+    z-index: 15;
+    &::before {
+      @include bracket(8px, 8px, -45deg, 1px);
+      right: 20px;
+      top: 45%;
+      color: $medium-purple;
+      transition: transform $short;
+    }
+  }
+
+  &__btn--active {
+    border-color: $purple-heart;
+    background-color: transparent;
+    &::before {
+      transform: rotate(135deg) translate(-3px, -3px);
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    top: -20px;
+    color: $dove-gray;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: max-content;
+    z-index: 10;
+    background-color: $white;
+    padding: 44px 13px 30px 30px;
+    background-color: $white;
+    border-right: 1px solid $allery;
+    border-bottom: 1px solid $allery;
+    border-left: 1px solid $allery;
+    border-radius: 0 0 $size-radius $size-radius;
+  }
+
+  &__dropdown--active {
+  }
+
+  .addit-group {
+    &__btn {
+      position: relative;
+      color: $medium-purple;
+
+      &:hover {
+        color: $mauve;
+      }
+
+      &:active {
+        color: $purple-heart;
+      }
+    }
+
+    &__list {
+      padding-top: 15px;
+      display: none;
+    }
+
+    &__list--active {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .filter-tablet {
+    .catalog-title--tablet {
+      margin-bottom: 25px;
+    }
+
+    &__title {
+      grid-column: span 2;
+      margin-right: 0;
+    }
+
+    &__form {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 16px;
+      max-width: 404px;
+    }
+
+    &__group:not(:nth-last-child(-n + 2)) button {
+      z-index: 25;
+    }
+    &__group:not(:nth-last-child(-n + 2)) .filter-tablet__dropdown {
+      z-index: 20;
+    }
+
+    &__btn {
+      padding: 9px 14px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .filter-tablet {
+    .catalog-title--tablet {
+      margin-bottom: 16px;
+    }
+
+    &__form {
+      gap: 16px;
+    }
+    &__dropdown {
+      padding-left: 7px;
+      padding-right: 7px;
+    }
+  }
+}

@@ -1,0 +1,122 @@
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: local("PlayfairDisplay"),
+    url("../fonts/PlayfairDisplay-Black.woff2") format("woff2"),
+    url("../fonts/PlayfairDisplay-Black.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.news {
+  color: $white;
+  
+  &__bg {
+    background-image: url("../img/news/bg-desktop.jpg");
+   @include bgStatic();
+  }
+
+  &__content {
+    @include flexBox();
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 600px;
+    width: 68%;
+  }
+
+  &__title {
+    font-family: "PlayfairDisplay", serif;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 120%;
+    color: $straw;
+    padding-top: 3px;
+  }
+
+  &__descr {
+    font-size: 48px;
+    line-height: 120%;
+    margin-bottom: 49px;
+  }
+  &__link--mobile,
+  &__link {
+    display: inline-block;
+    padding: 21px 32px;
+    background-color: $medium-purple;
+    font-weight: 700;
+    text-align: center;
+  }
+  &__link--mobile {
+    display: none;
+    margin: 0 12px;
+  }
+
+  .catalog-link {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) {
+  .news {
+    &__bg {
+      background-image: url("../img/news/bg-tablet.jpg");
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .news {
+    &__bg {
+      background-image: url("../img/news/bg-medium.jpg");
+    }
+
+    &-container {
+      max-width: 765px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .news {
+    &__bg {
+      margin-bottom: 32px;
+    }
+
+    &__content {
+      max-width: 50%;
+      min-height: 210px;
+    }
+
+    &__title {
+      font-size: 34px;
+    }
+
+    &__descr {
+      font-size: 26px;
+      margin-bottom: 82px;
+    }
+
+    &__link--desktop {
+      display: none;
+    }
+    &__link--mobile {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .news__bg {
+    background-image: url("../img/news/bg-mobile.jpg");
+    margin-bottom: 32px;
+  }
+
+  .news__title {
+    font-size: 24px;
+  }
+
+  .news__descr {
+    font-size: 16px;
+    margin-bottom: 82px;
+  }
+}

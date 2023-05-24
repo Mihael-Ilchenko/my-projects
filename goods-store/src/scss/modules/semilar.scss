@@ -1,0 +1,148 @@
+.semilar {
+  &-swiper {
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 24px;
+  }
+
+  a {
+    &::before {
+      display: none;
+    }
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+  &__list {
+    li {
+      border-radius: $size-radius;
+    }
+  }
+
+  .card {
+    min-height: auto;
+    padding: 0;
+    padding-top: 58px;
+    padding-bottom: 30px;
+
+    &-img {
+      min-height: 133px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &-title {
+      margin-bottom: 24px;
+    }
+
+    &-text {
+      padding: 0 30px;
+    }
+
+    &-price {
+      span {
+        font-size: $main-fz;
+        margin-right: 0;
+      }
+    }
+  }
+  .card-price-new {
+    color: $dove-gray;
+  }
+
+  .card {
+    &-sticker {
+      font-size: $main-fz;
+      left: 30px;
+      &__discount {
+        padding-top: 2px;
+        min-width: auto;
+        min-height: auto;
+        background-color: transparent;
+        color: $crusta;
+
+        &::before {
+          content: "";
+          width: 16px;
+          height: 15px;
+          margin-right: 6px;
+          background-image: url("../img/icons/icons.svg#star");
+          background-repeat: no-repeat;
+        }
+
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .swiper-navigation {
+    top: -5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .semilar {
+    .card {
+      &-img {
+        padding: 0 16px;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .semilar {
+    &-wrapper {
+      padding-bottom: 49px;
+    }
+    .card {
+      padding-top: 38px;
+      padding-bottom: 16px;
+
+      &-img {
+        align-items: center;
+        min-height: 62px;
+        margin-bottom: 8px;
+      }
+
+      &-text {
+        padding: 0 16px;
+      }
+
+      &-title {
+        font-size: $main-fz;
+        margin-bottom: 17px;
+      }
+
+      &-link {
+        padding: 8px 22px;
+      }
+
+      &-price {
+        margin-bottom: 16px;
+      }
+
+      &-sticker {
+        top: 16px;
+        left: 16px;
+        span {
+          font-size: 12px;
+          font-weight: 400;
+          &::before {
+            background-size: 13px 12px;
+            margin-right: 2px;
+          }
+        }
+      }
+    }
+    .swiper-navigation {
+      top: auto;
+      bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="files/plugins/swiper.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Карточка товара</title>
+</head>
+
+<body>
+  @@include('html/header.html', {})
+  <main class="product-main">
+    <h1 class="visually-hidden">Магазин мебели</h1>
+    @@include('html/page-path.html', {})
+    @@include('html/main-product.html', {})
+    @@include('html/semilar.html', {})
+    @@include('html/modal.html', {})
+  </main>
+  @@include('html/footer.html', {})
+
+  <script>
+    const productName = localStorage.getItem('product');
+    const productItem = document.querySelector('.page-path-product');
+    const productLink = document.querySelector('.page-path-product > a');
+    productItem.style.display = 'block';
+    let oneSimbol = productName.slice(0, 1).toUpperCase();
+    productLink.textContent = oneSimbol + productName.slice(1);
+    if(document.querySelector(`[data-target="${productName}"]`)) {
+      document.querySelector(`[data-target="${productName}"]`).style.display = 'block';
+    }
+    
+   
+  
+
+
+  </script>
+  <script src="js/index.min.js" type="module"></script>
+</body>
+
+</html>

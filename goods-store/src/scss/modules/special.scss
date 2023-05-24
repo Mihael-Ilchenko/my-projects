@@ -1,0 +1,200 @@
+.special {
+ 
+  &__title {
+    padding-right: 10px;
+  }
+  &-wrapper {
+    position: relative;
+  }
+}
+
+.card {
+  position: relative;
+  padding: 72px 30px 30px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  &-img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 16px;
+  }
+
+  &-title {
+    margin-bottom: 21px;
+    font-size: 24px;
+    line-height: 130%;
+    font-weight: 400;
+  }
+  &-price {
+    margin-bottom: 23px;
+    &-new {
+      color: $crusta;
+      font-size: 18px;
+      line-height: 130%;
+      margin-right: 27px;
+    }
+    &-old {
+      font-size: $main-fz;
+      line-height: 130%;
+      color: $dusty-gray;
+    }
+  }
+  &-sticker {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: $white;
+
+    &__discount {
+      position: relative;
+      @include flexBox();
+      min-width: 82px;
+      min-height: 34px;
+      background-color: $crusta;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -9px;
+        top: 0;
+        border-top: 17px solid transparent;
+        border-left: 10px solid $crusta;
+        border-bottom: 17px solid transparent;
+      }
+    }
+  }
+
+  &-link {
+    align-self: flex-start;
+    display: inline-block;
+    border: 2px solid $medium-purple;
+    border-radius: $size-radius;
+    padding: 15px 33px;
+    font-weight: 600;
+    color: $medium-purple;
+    margin-top: auto;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &-link:hover {
+    color: $white;
+    background-color: $medium-purple;
+  }
+  &-link:focus-visible:not(:hover) {
+    color: $white;
+  }
+
+  &-link:active {
+    color: $white;
+    background-color: $purple-heart;
+    border-color: $purple-heart;
+  }
+}
+
+.special-swiper {
+  overflow: hidden;
+
+  &__item {
+    background-color: $alabaster;
+    border-radius: $size-radius;
+    height: auto;
+    flex-basis: 296px;
+  }
+  &__item:nth-child(3n - 1) {
+    flex-basis: 624px;
+  }
+  &__item:nth-child(3n - 1) .card {
+    padding-top: 37px;
+    min-height: calc(100% - 67px);
+    background-size: 230px 107px;
+    background-position: 93% 93%;
+    background-repeat: no-repeat;
+  }
+  .fabric-details {
+    background-image: url("../img/special/fabric-sofa-details.png");
+  }
+
+  .floc-details {
+    background-image: url("../img/special/floc-details.png");
+  }
+
+  &__item:nth-child(3n - 1) .card-text {
+    max-width: 40%;
+  }
+  &__item:nth-child(3n - 1) .card-img {
+    padding-left: 7px;
+  }
+
+  &__item:nth-child(3n) > .card {
+    padding-top: 64px;
+  }
+
+  &__item:nth-child(3n) .card-title {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .special-swiper__item:nth-child(3n-1) {
+    flex-basis: 296px;
+  }
+
+  .card {
+    min-height: calc(100% - 161px);
+  }
+
+  .special-swiper {
+    &__item:nth-child(3n - 1) .card {
+      padding-top: 112px;
+      min-height: calc(100% - 161px);
+      padding-left: 21px;
+      padding-right: 21px;
+    }
+    &__item:nth-child(3n - 1) .card-img {
+      padding-left: 0;
+      height: auto;
+      margin-bottom: 48px;
+    }
+
+    &__item:nth-child(3n - 1) .card-text {
+      max-width: 100%;
+      padding-left: 9px;
+      padding-right: 16px;
+    }
+
+    .fabric-details,
+    .floc-details {
+      background-image: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .special {
+    margin-bottom: 101px;
+    &-swiper {
+      padding-bottom: 17px;
+
+      &__item {
+        flex-basis: 100%;
+      }
+
+      &__item:nth-child(3n - 1) {
+        flex-basis: 100%;
+      }
+    }
+  }
+}

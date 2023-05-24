@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" type="image/x-icon" href="img/favicon.png" />
+</head>
+<body>
+  @@include('html/header.html', {})
+<main class="cooperation-main">
+  <h1 class="visually-hidden">Магазин мебели</h1>
+  @@include('html/page-path.html', {})
+  @@include('html/main-cooperation.html', {})
+  @@include('html/modal.html', {})
+</main>
+
+
+  @@include('html/footer.html', {})
+  <script src="js/index.min.js" type="module"></script>
+</body>
+</html>

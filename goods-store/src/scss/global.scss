@@ -1,0 +1,272 @@
+@import "variables";
+@import "mixins";
+
+
+
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),
+    url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+    url("../fonts/OpenSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),
+    url("../fonts/OpenSans-SemiBold.woff2") format("woff2"),
+    url("../fonts/OpenSans-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OpenSans";
+  src: local("OpenSans"),
+    url("../fonts/OpenSans-Bold.woff2") format("woff2"),
+    url("../fonts/OpenSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+
+
+body {
+  font-family: "OpenSans", sans-serif;
+  min-width: 320px;
+  color: $mine-shaft;
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1350px;
+  padding: 0 36px;
+}
+
+.section {
+  margin-bottom: 70px;
+
+}
+
+.section-title {
+  font-weight: 400;
+  font-size: $main-fz * 2;
+  line-height: 100%;
+  margin-bottom: 26px;
+}
+
+.link-reset {
+  text-decoration: none;
+  color: inherit;
+}
+
+.link-reset:focus {
+  outline: none;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.input-reset {
+  border: none;
+  padding: 0;
+  max-width: 100%;
+}
+.input-reset:focus {
+  outline: none;
+}
+
+.p {
+  padding: 15px 25px;
+}
+
+.btn-reset {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-reset:focus {
+  outline: none;
+}
+
+picture {
+  display: block;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}
+
+.d-none {
+  display: none;
+}
+
+.d-block {
+  display: block;
+}
+
+
+h1,h2,h3,h4,h5,h6,p, fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+.interaction-one {
+  transition: color $short, background-color $short;
+}
+
+.interaction-one::before {
+  content: "";
+  position: absolute;
+  @include stretch(-4px, -8px, -4px, -8px);
+  z-index: -1;
+}
+
+.interaction-one:focus-visible:not(:hover)::before {
+  background-color: $blue-chalk;
+
+}
+
+.interaction-one:focus-visible:not(:hover) {
+  color: $purple-heart;
+}
+ 
+
+.interaction-one:hover {
+    color: $mauve;
+} 
+
+.interaction-one:active {
+  color: $purple-heart;
+} 
+
+
+.interaction-two {
+  transition: border-color $short;
+}
+
+.interaction-two:hover {
+  border-color: $medium-purple;
+}
+
+.interaction-two:focus-visible:not(:hover) {
+  background-color: $magnolia;
+  border-color: $medium-purple;
+}
+
+.interaction-two:active {
+  border-color: $purple-heart;
+}
+
+
+
+.interaction-three {
+  border-radius: $size-radius;
+  transition: color $short, background-color $short, border-color $short;
+}
+
+.interaction-three:hover {
+  background-color: $mauve;
+}
+
+.interaction-three:focus-visible:not(:hover) {
+  border-color: $purple-heart;
+  background-color: $mauve;
+}
+
+.interaction-three:active {
+  background-color: $purple-heart;
+}
+
+
+
+.drop-link {
+  position: relative;
+  transition: color $short, background-color $short;
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    height: 1px;
+    background-color: transparent;
+    transform: scaleX(0);
+    transition: transform $short
+  }
+}
+
+.drop-link:hover {
+  color: $medium-purple;
+  
+  &::before {
+    background-color: currentColor;
+     transform: none;
+  }
+}
+.drop-link:focus-visible:not(:hover) {
+  background-color: $blue-chalk
+}
+
+.drop-link:active {
+  color: $purple-heart;
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 695px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    padding: 0 12px;
+  }
+
+  .section {
+    margin-bottom: 70px;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+}

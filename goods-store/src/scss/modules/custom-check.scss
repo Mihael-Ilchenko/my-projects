@@ -1,0 +1,47 @@
+.custom-checkbox {
+  margin-right: 6px;
+  opacity: 0;
+}
+
+
+
+.custom-check {
+  position: absolute;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 1px solid $dusty-gray;
+  border-radius: 2px;
+  left: 0;
+  transition: background-color $short, border-color $short;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -60%) rotate(45deg);
+    width: 5px;
+    height: 9px;
+    background-color: transparent;
+    border-bottom: 2px solid $white;
+    border-right: 2px solid $white;
+    opacity: 0;
+    transition: opacity $short;
+  }
+}
+
+
+
+.custom-checkbox:checked + span::before {
+  opacity: 1;
+}
+.custom-checkbox:checked + span {
+  border-color: $medium-purple;
+  background-color: $medium-purple;
+}
+
+.custom-checkbox:focus-visible + span {
+  border-color: $medium-purple;
+  background-color: $blue-chalk;
+}

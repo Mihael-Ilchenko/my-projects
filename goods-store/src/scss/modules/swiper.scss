@@ -1,0 +1,121 @@
+
+
+.swiper {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.swiper-slide {
+  background-color: $alabaster;
+  height: auto;
+  box-sizing: border-box;
+ 
+}
+
+
+
+
+.swiper-navigation {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 32px;
+  width: 77px;
+
+
+  
+
+  
+
+  
+
+
+  
+
+
+ 
+
+
+
+
+}
+
+.swiper-button-next,
+  .swiper-button-prev {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    color: $medium-purple;
+     margin: 0;
+     border: 2px solid currentColor;
+     border-radius: 50%;
+     width: 32px;
+     height: 32px;
+     transition: color $short, background-color $short, border-color $short;
+  }
+.swiper-button-next {
+  &::before {
+   @include bracket(9px, 9px, -135deg, 2px);
+   right: 55%;
+   transition: color $short;
+  }
+}
+
+.swiper-button-prev {
+  &::before {
+   @include bracket(9px, 9px, 45deg, 2px);
+   right: 40%;
+   transition: color $short;
+  }
+}
+.swiper-button-next.swiper-button-disabled,
+  .swiper-button-prev.swiper-button-disabled{
+color: $dusty-gray;
+opacity: 1;
+  }
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: $medium-purple;
+  &::before {
+    color: $white;
+  }
+}
+.swiper-button-next:focus,
+.swiper-button-prev:focus {
+  outline: none;
+}
+.swiper-button-next:focus-visible:not(:hover),
+  .swiper-button-prev:focus-visible:not(:hover) {
+
+    background-color: $mauve;
+    border-color: $medium-purple;
+    &::before {
+      color: $white;
+    }
+  }
+.swiper-button-next:active,
+  .swiper-button-prev:active {
+    background-color: $purple-heart;
+    border-color: $purple-heart;
+    &::before {
+      color: $white;
+    }
+  }
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  
+.swiper-navigation {
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+}
+}

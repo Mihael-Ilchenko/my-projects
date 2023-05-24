@@ -1,0 +1,32 @@
+@mixin flexBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin stretch($top, $right, $bottom, $left) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+
+@mixin bracket($width, $height, $rotate, $borderWidth) {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translateY(-50%) translateX(50%) rotate($rotate);
+  width: $width;
+  height: $height;
+  color: inherit;
+  border-bottom: $borderWidth solid currentColor;
+  border-left: $borderWidth solid currentColor;
+}
+
+@mixin bgStatic() {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}

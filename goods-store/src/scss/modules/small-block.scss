@@ -1,0 +1,255 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.page-path {
+  color: $dusty-gray;
+  margin-bottom: 32px;
+  font-size: $main-fz - 2px;
+
+  &__item {
+    margin-right: 2px;
+    a::after {
+      content: "/";
+      padding-left: 7px;
+    }
+  }
+
+  &-divani-pram {
+    a:after {
+      display: none;
+    }
+  }
+
+  &-product {
+    padding-left: 16px;
+    a::after {
+      position: absolute;
+      left: -9px;
+      padding-left: 0;
+      content: "/";
+      color: $dusty-gray;
+    }
+  }
+
+  &__link {
+    position: relative;
+    &::before {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &__link--active {
+    color: $purple-heart;
+  }
+}
+
+.modal {
+  position: fixed;
+  @include flexBox();
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  z-index: 50;
+  display: none;
+
+  &-wrap {
+    position: relative;
+    width: 100%;
+    max-width: 624px;
+    background-color: $white;
+    border-radius: $size-radius;
+    padding: 30px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+  }
+
+  &__descr {
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 30px;
+    max-width: 68%;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    background-color: $alabaster;
+    padding: 17px 18px;
+    border-radius: $size-radius;
+    margin-bottom: 30px;
+    border: 1px solid transparent;
+    transition: background-color $short, border-color $short;
+  }
+
+  &__input:hover {
+    background-color: $allery;
+  }
+
+  &__input:focus-visible:not(:hover) {
+    background-color: $magnolia;
+    border-color: $medium-purple;
+  }
+
+  &__input:focus:not(:placeholder-shown) {
+    border-color: #b8ec64;
+    background-color: initial;
+  }
+
+  &__submit {
+    align-self: flex-start;
+    background-color: $medium-purple;
+    padding: 18px 35px;
+    font-weight: 600;
+    color: $white;
+    margin-bottom: 13px;
+    margin-top: -1px;
+  }
+
+  &__label {
+    position: relative;
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  &__link {
+    text-decoration: underline;
+    color: $medium-purple;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: $dusty-gray;
+    transition: color $short, background-color $short;
+    padding: 3px 3px 0 3px;
+  }
+
+  &__close:hover {
+    color: $medium-purple;
+  }
+
+  &__close:focus-visible:not(:hover) {
+    color: $purple-heart;
+    background-color: $blue-chalk;
+  }
+  &__close:active {
+    color: $purple-heart;
+  }
+}
+
+.thanks {
+  .modal-content {
+    padding-top: 23px;
+    @include flexBox();
+    flex-direction: column;
+    min-height: 360px;
+    picture {
+      display: block;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  .modal__img {
+    padding-right: 45px;
+  }
+
+  .modal__close {
+    top: 17px;
+    right: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    &-wrap {
+      max-width: 80vw;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .page-path {
+    display: none;
+  }
+
+  .modal {
+    &-wrap {
+      max-width: 92vw;
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+
+    &__descr {
+      max-width: 100%;
+      margin-bottom: 16px;
+    }
+
+    &__input {
+      margin-bottom: 16px;
+    }
+
+    &__close {
+      top: 9px;
+      right: 12px;
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &__label {
+      font-size: 12px;
+      margin: 0 -3px;
+    }
+    .custom-checkbox {
+      margin-right: 3px;
+    }
+  }
+
+  .thanks {
+    .modal-content {
+      padding-top: 26px;
+      min-height: 155px;
+      picture {
+        margin-bottom: 14px;
+      }
+    }
+
+    .modal__img {
+      max-width: 98px;
+      padding-right: 24px;
+    }
+
+    &__title {
+      font-size: $main-fz;
+      max-width: 80%;
+    }
+
+    .modal__close {
+      top: 10px;
+      right: 12px;
+    }
+  }
+}
