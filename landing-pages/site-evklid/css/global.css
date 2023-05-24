@@ -1,0 +1,100 @@
+:root {
+    /* background */
+    --bg-color-white: #fff;
+    --footer-bg-color: #222;
+    --color-FF9900: #FF9900;
+    --bg-colorbtnE1670E: #E1670E;
+    --bg-colorbtnF7B045: #F7B045;
+    --bg-colorbtn666: #666;
+    --bg-input-414141: #414141;
+    /* text */
+    --color-text-fff: #fff;
+    --color-text-FF9900: #FF9900;
+    --color-text-333: #333;
+    --color-text-CACACA: #CACACA;
+    --color-text-link: #fff;
+    /* border */
+    /*color */
+    --color-svg-FF9900: #FF9900;
+    --color-svg-fff: #fff;
+    --color-link-E1670E: #E1670E;
+    --color-link-FF9900: #FF9900;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+.input-reset {
+    border: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.section {
+    margin-bottom: 100px;
+}
+
+.container {
+    width: 92.188vw;
+    margin: 0 auto;
+}
+
+a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.link-reset {
+    background-color: transparent;
+}
+
+.btn {
+    background: var(--bg-color-FF9900);
+    color: var(--color-text-fff);
+    text-align: center;
+    transition: color .3s ease, background .3s ease;
+}
+
+.btn-reset {
+    display: inline;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
