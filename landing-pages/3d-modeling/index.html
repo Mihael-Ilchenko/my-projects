@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css" type="text/css">
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+    <link rel="stylesheet" href="css/media.css" type="text/css">
+    <script src="index.js"></script>
+    <link rel="icon" href="favicon/favicon.svg">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row align-items-center justify-content-between g-0">
+                <div class="logo col-auto col-sm-12 col-md-auto">
+                    <a href="# " class="logo__link ">
+                        <svg class="logo-svg" width="72" height="16" viewbox="0 0 72 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.0517 11.4042C10.0517 13.917 8.04715 15.7394 4.8623 15.7394C3.94725 15.7136 3.0464 15.5077 2.21183 15.1336C1.37726 14.7594 0.625498 14.2245 0 13.5596L1.06468 12.3848C2.06196 13.3318 3.23464 14.2522 4.84085 14.2522C6.62553 14.2522 8.54885 13.2541 8.54885 11.4606C8.54885 9.97105 7.36315 8.99962 4.87072 8.23391C2.03055 7.36762 0.589787 6.19276 0.589787 3.98248C0.588255 1.79505 2.44187 0 5.08596 0C7.05983 0 8.29532 0.839619 9.49711 1.91238L8.45004 3.07276C7.39609 2.14095 6.39192 1.50933 5.15949 1.50933C3.63064 1.50857 2.1217 2.49295 2.1217 3.90857C2.1217 5.19162 2.86009 6.00914 5.46894 6.8061C7.85872 7.54057 10.0517 8.67886 10.0517 11.4027V11.4042ZM22.9389 1.4461C22.9389 2.13486 23.498 2.6941 24.1882 2.6941C24.5198 2.6941 24.8377 2.56229 25.0721 2.32838C25.2465 2.1538 25.3652 1.93186 25.4133 1.69042C25.4614 1.44897 25.4367 1.19878 25.3424 0.971236C25.248 0.74369 25.0883 0.548925 24.883 0.41138C24.6778 0.273834 24.4364 0.199636 24.1889 0.198095C23.4988 0.198095 22.9397 0.756571 22.9397 1.4461H22.9389ZM38.5491 14.9912C38.5491 14.9912 39.4759 15.7432 42.5658 15.7432L42.5643 15.7425C45.6143 15.7425 48.0899 13.5162 48.0899 10.4739C48.0899 7.43238 45.6158 5.21448 42.5658 5.21448C41.7003 5.19162 40.8424 5.36686 40.055 5.72724V0.456381H38.5491V14.9912V14.9912ZM49.8539 10.4891C49.8539 13.5322 52.3249 16 55.3741 16C58.4234 16 60.8959 13.533 60.8967 10.4899C60.8967 7.44686 58.4242 4.97981 55.3749 4.97981C52.3264 4.97981 49.8539 7.4461 49.8539 10.4891V10.4891ZM70.0338 15.4949H72L67.6524 10.3261L71.7066 5.47886H69.7519L66.6728 9.16038L63.5775 5.47886H61.6113L65.6946 10.3322L61.3777 15.4949H63.3317L66.6743 11.4987L70.0338 15.4949V15.4949ZM55.3887 6.46857C54.5926 6.46909 53.8146 6.7047 53.1532 7.14552C52.4919 7.58635 51.977 8.21255 51.6738 8.94476C51.3693 9.67792 51.2895 10.4843 51.4445 11.2624C51.5994 12.0406 51.9822 12.7558 52.5447 13.3181C53.1059 13.879 53.8221 14.2613 54.6022 14.4162C55.3824 14.5711 56.1913 14.4918 56.926 14.1882C57.6615 13.8831 58.2897 13.3682 58.7314 12.7084C59.173 12.0486 59.4084 11.2735 59.4077 10.4808C59.4077 8.26514 57.6077 6.46857 55.3879 6.46857H55.3887ZM42.5742 6.72229C41.6739 6.73472 40.7984 7.01756 40.0626 7.53371V13.7394C40.8426 14.1178 41.7072 14.2904 42.5734 14.2408C44.7917 14.2408 46.5909 12.6941 46.5909 10.4815C46.5909 8.26895 44.7901 6.72152 42.5719 6.72152H42.5734L42.5742 6.72229ZM35.041 0.457143H33.5344V15.4926H35.041V0.457143ZM28.5174 0.457143H30.024V15.4926H28.5174V0.457143ZM13.9473 10.24L13.9427 10.2354L13.9473 10.2309V10.24ZM13.9473 15.4926V10.24L19.2117 15.4949H21.3419L16.0721 10.2354L20.8432 5.47124H18.7123L13.9466 10.2309V0.457143H12.4399V15.4926H13.9466H13.9473ZM23.4889 15.4949H24.9947V5.47124H23.4889V15.4949V15.4949Z"
+                fill="white" />
+            </svg>
+                    </a>
+                </div>
+                <div class="burger col-auto ms-auto d-sm-none " id="burger">
+                    <button class="burger-btn btn-reset d-flex flex-column justify-content-between">
+            <span class=" burger-btn-elem burger-btn-elem-1 "></span>
+            <span class="burger-btn-elem burger-btn-elem-2 "></span>
+            <span class="burger-btn-elem burger-btn-elem-3 "></span>
+          </button>
+
+                    <ul class="burger__list list-reset d-flex flex-column " id="burger-list">
+                        <li class=" header-item burger-item ">
+                            <a href="# " class="header__link ">Главная</a>
+                        </li>
+                        <li class="header-item burger-item ">
+                            <a href="# " class="header__link ">О нас</a>
+                        </li>
+                        <li class="header-item burger-item ">
+                            <a href="# " class="header__link ">Преподаватели</a>
+                        </li>
+                        <li class="header-item burger-item ">
+                            <a href="# " class="header__link ">Курсы</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="header__nav d-none d-sm-block col-sm-12 col-md-9 col-xl-6 px-xl- ">
+                    <nav class="nav ">
+                        <ul class="header__list list-reset d-flex justify-content-between ">
+                            <li class=" header-item ">
+                                <a href="#" class="header__link">Главная</a>
+                            </li>
+                            <li class="header-item ">
+                                <a href="#about" class="header__link">О нас</a>
+                            </li>
+                            <li class="header-item ">
+                                <a href="#teachers" class="header__link">Преподаватели</a>
+                            </li>
+                            <li class="header-item ">
+                                <a href="#courses" class="header__link">Курсы</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section-offset hero ">
+            <div class="container hero-container ">
+                <div class="row g-0 ">
+                    <div class="hero__content col-12 col-sm-9 col-md-7 col-xl-5 ">
+                        <h1 class="hero-title ">Курсы&nbsp;3D моделирования</h1>
+                        <p class="hero__descr ">
+                            Следует отметить, что существующая теория способствует повышению качества благоприятных перспектив. Не&nbsp;следует, однако, забывать.
+                        </p>
+                        <a href="#courses" class="hero__link interactiv">Выбрать курс</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about -->
+        <section id="about" class="about ">
+            <div class="container ">
+                <div class="row g-0 ">
+                    <div class="about__adv col-12 col-lg-9 ">
+                        <h2 class="about__title ">
+                            Преимущества обучения в&nbsp;skillbox
+                        </h2>
+                        <p class="about__descr ">
+                            Имеется спорная точка зрения, гласящая примерно следующее: акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа политической культуры, будут рассмотрены исключительно в разрезе маркетинговых предпосылок.
+                        </p>
+                    </div>
+                    <div class="row g-0 ">
+                        <div class="about__block about__block-a col-12 col-sm-4 d-flex align-items-center flex-sm-column align-items-sm-start flex-xl-row align-items-xl-center ">
+                            <span class=" about__block-elem about__block-elem-a d-flex align-items-center justify-content-center "></span>
+                            <p class="about__block-descr ">Результат вашего обучения является самым важным для нас приоритетом</p>
+                        </div>
+                        <div class="about__block about__block-b col-12 col-sm-4 d-flex align-items-center flex-sm-column align-items-sm-start flex-xl-row align-items-xl-center ">
+                            <span class="about__block-elem about__block-elem-b "></span>
+                            <p class="about__block-descr ">Лично познакомитесь с одним из своих будущих преподавателей</p>
+                        </div>
+                        <div class="about__block about__block-c col-12 col-sm-4 d-flex align-items-center flex-sm-column align-items-sm-start flex-xl-row align-items-xl-center ">
+                            <span class=" about__block-elem about__block-elem-c "></span>
+                            <p class="about__block-descr ">Значимость этих проблем очевидна, поэтому стоит всегда быть внимательным
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="teachers" class="teachers">
+            <div class="container teachers-container ">
+                <h3 class="teachers__title ">
+                    Преподаватели курсов
+                </h3>
+                <div class="row g-0 justify-content-xl-between ">
+                    <div class=" box col-12 col-sm-6 col-xl-3 ">
+                        <div class="teachers__photo ">
+                            <picture class="teachers__picture ">
+                                <source srcset="img/teachers/1200/teachers-box-1-1200.jpg " media="(min-width: 1200px) ">
+                                <source srcset="img/teachers/768/teachers-box-1-768.jpg " media="(min-width: 768px) and (max-width: 1199.98px) ">
+                                <source srcset="img/teachers/576/teachers-box-1-576.jpg " media="(min-width: 576px) and (max-width: 767.98px) ">
+                                <source srcset="img/teachers/320/teachers-box-1-320.jpg " media="(min-width: 320px) and (max-width: 575.98px) ">
+                                <img class="teachers-img " src="img/teachers/default/teachers-box-1-default.jpg " alt="Владимир Петров ">
+                            </picture>
+                        </div>
+                        <div class="teachers__text ">
+                            <p class="teachers__name ">
+                                Владимир Петров
+                            </p>
+                            <p class="teachers__descr ">
+                                Лишь непосредственные участники технического прогресса неоднозначны и будут в равной степени предоставлены сами себе.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box col-12 col-sm-6 col-xl-3 ">
+                        <div class="teachers__photo ">
+                            <picture class="teachers__picture ">
+                                <source srcset="img/teachers/1200/teachers-box-2-1200.jpg " media="(min-width: 1200px) ">
+                                <source srcset="img/teachers/768/teachers-box-2-768.jpg " media="(min-width: 768px) and (max-width: 1199.98px) ">
+                                <source srcset="/img/teachers/576/teachers-box-2-576.jpg " media="(min-width: 576px) and (max-width: 767.98px) ">
+                                <source srcset="img/teachers/320/teachers-box-2-320.jpg " media="(min-width: 320px) and (max-width: 575.98px) ">
+                                <img class="teachers-img " src="/img/teachers/default/teachers-box-2-default.jpg " alt="Денис Сергеев ">
+                            </picture>
+                        </div>
+                        <div class="teachers__text ">
+                            <p class="teachers__name ">
+                                Денис Сергеев
+                            </p>
+                            <p class="teachers__descr ">
+                                Безусловно, разбавленное изрядной долей эмпатии, рациональное мышление.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box col-12 col-sm-6 col-xl-3 ">
+                        <div class="teachers__photo ">
+                            <picture class="teachers__picture ">
+                                <source srcset="img/teachers/1200/teachers-box-3-1200.jpg " media="(min-width: 1200px) ">
+                                <source srcset="img/teachers/768/teachers-box-3-768.jpg " media="(min-width: 768px) and (max-width: 1199.98px) ">
+                                <source srcset="/img/teachers/576/teachers-box-3-576.jpg " media="(min-width: 576px) and (max-width: 767.98px) ">
+                                <source srcset="img/teachers/320/teachers-box-3-320.jpg " media="(min-width: 320px) and (max-width: 575.98px) ">
+                                <img class="teachers-img " src="/img/teachers/default/teachers-box-3-default.jpg " alt="Михаил Андреев ">
+                            </picture>
+                        </div>
+                        <div class="teachers__text ">
+                            <p class="teachers__name ">
+                                Михаил Андреев
+                            </p>
+                            <p class="teachers__descr ">
+                                Ясность нашей позиции очевидна:высокое качество позиционных исследований напрямую зависит от вывода.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="box col-12 col-sm-6 col-xl-3 ">
+                        <div class="teachers__photo ">
+                            <picture class="teachers__picture ">
+                                <source srcset="img/teachers/1200/teachers-box-4-1200.jpg " media="(min-width: 1200px) ">
+                                <source srcset="img/teachers/768/teachers-box-4-768.jpg " media="(min-width: 768px) and (max-width: 1199.98px) ">
+                                <source srcset="/img/teachers/576/teachers-box-4-576.jpg " media="(min-width: 576px) and (max-width: 767.98px) ">
+                                <source srcset="img/teachers/320/teachers-box-4-320.jpg " media="(min-width: 320px) and (max-width: 575.98px) ">
+                                <img class="teachers-img " src="/img/teachers/default/teachers-box-4-default.jpg " alt="Константин Дмитриев ">
+                            </picture>
+                        </div>
+                        <div class="teachers__text ">
+                            <p class="teachers__name ">
+                                Константин Дмитриев
+                            </p>
+                            <p class="teachers__descr ">
+                                Мы вынуждены отталкиваться от того, что существующая теория, в&nbsp;своём классическом представлении.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="courses" class="courses">
+            <div class="container ">
+                <h3 class="courses__title ">Курсы</h3>
+                <div class="row g-0 ">
+                    <div class="courses-offset col-12 col-sm-6 ">
+                        <div class="courses__box ">
+                            <div class="courses__decor courses-cinema ">
+                                <div class="courses__time ">
+                                    <span class="time-elem "></span>
+                                    <span class="time-descr ">60 часов</span>
+                                </div>
+                                <picture class="courses__picture ">
+                                    <source srcset="/img/courses/box-1/1200/decor-1200.png " media="(min-width: 1200px) ">
+                                    <source srcset="/img/courses/box-1/768/decor-768.png " media="(min-width: 768px) and (max-width: 1199.98px) ">
+                                    <source srcset="/img/courses/box-1/576/decor-576.png " media="(min-width: 576px) and (max-width: 767.98px) ">
+
+                                    <source srcset="/img/courses/box-1/default/decor-default.png " media="(min-width: 320px) and (max-width: 575.98px) ">
+                                    <img aria-label="presentation " class="courses-img courses-cinema-img " src="/img/courses/box-1/default/decor-default.png " alt="Декоративное изображение Cinema 4d ">
+                                </picture>
+                            </div>
+
+                            <div class="courses__content ">
+                                <h4 class="courses__subtitle ">Cinema 4d для начинающих</h4>
+                                <p class="courses__descr ">
+                                    Учитывая ключевые сценарии поведения, базовый вектор развития напрямую зависит от системы массового участия. Следует отметить, что сложившаяся структура организации напрямую зависит от стандартных подходов.
+                                </p>
+                                <a href="# " class="interactiv courses__link ">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courses-offset col-12 col-sm-6 ">
+                        <div class="courses__box ">
+                            <div class="courses__decor courses-blender ">
+                                <div class="courses__time ">
+                                    <span class="time-elem "></span>
+                                    <span class="time-descr ">40 часов</span>
+                                </div>
+                                <picture class="courses__picture ">
+                                    <source srcset="/img/courses/box-2/decor-1200.png " media="(min-width: 1200px) ">
+                                    <source srcset="/img/courses/box-2/decor-768.png " media="(min-width: 768px) and (max-width: 1199.98px) ">
+                                    <source srcset="/img/courses/box-2/decor-576.png " media="(min-width: 576px) and (max-width: 767.98px) ">
+                                    <source srcset="/img/courses/box-2/decor-default.png " media="(min-width: 320px) and (max-width: 575.98px) ">
+                                    <img aria-label="presentation " class="courses-img " src="/img/courses/box-2/decor-default.png " alt="Декоративное изображение Blender ">
+                                </picture>
+                            </div>
+                            <div class="courses__content ">
+                                <h4 class="courses__subtitle ">Blender: продвинутый уровень</h4>
+                                <p class="courses__descr ">
+                                    Но убеждённость некоторых оппонентов в значительной степени обусловливает важность форм воздействия. Внезапно, тщательные исследования конкурентов представлены.
+                                </p>
+                                <a href="# " class="interactiv courses__link ">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courses-offset col-12 col-sm-6 ">
+                        <div class="courses__box ">
+                            <div class="courses__decor courses-vizualization ">
+                                <div class="courses__time ">
+                                    <span class="time-elem "></span>
+                                    <span class="time-descr ">40 часов</span>
+                                </div>
+                                <picture class="courses__picture ">
+                                    <source srcset="/img/courses/box-3/decor-1200.jpg " media="(min-width: 1200px) ">
+                                    <source srcset="/img/courses/box-3/decor-768.jpg " media="(min-width: 768px) and (max-width: 1199.98px) ">
+                                    <source srcset="/img/courses/box-3/decor-576.png " media="(min-width: 576px) and (max-width: 767.98px) ">
+                                    <source srcset="/img/courses/box-3/decor-default.png " media="(min-width: 320px) and (max-width: 575.98px) ">
+                                    <img aria-label="presentation " class="courses-img " src="/img/courses/box-3/decor-default.png " alt="Декоративное изображение Визуализация в 3ds Max ">
+                                </picture>
+                            </div>
+
+                            <div class="courses__content ">
+                                <h4 class="courses__subtitle ">Визуализация в 3ds Max</h4>
+                                <p class="courses__descr ">
+                                    Повседневная практика показывает, что сложившаяся структура организации обеспечивает актуальность кластеризации усилий.
+                                </p>
+                                <a href="#" class="interactiv courses__link ">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="courses-offset col-12 col-sm-6 ">
+                        <div class="courses__box ">
+                            <div class="courses__decor courses-sculpting ">
+                                <div class="courses__time ">
+                                    <span class="time-elem "></span>
+                                    <span class="time-descr ">80 часов</span>
+                                </div>
+                                <picture class="courses__picture ">
+                                    <source srcset="/img/courses/box-4/decor-1200.jpg " media="(min-width: 1200px) ">
+                                    <source srcset="/img/courses/box-4/decor-768.jpg " media="(min-width: 768px) and (max-width: 1199.98px) ">
+                                    <source srcset="/img/courses/box-4/decor-576.png " media="(min-width: 576px) and (max-width: 767.98px) ">
+                                    <source srcset="/img/courses/box-4/decor-default.png " media="(min-width: 320px) and (max-width: 575.98px) ">
+                                    <img aria-label="presentation " class="courses-img " src="/img/courses/box-4/decor-default.png " alt="Декоративное изображение Скульптинг в ZBrush ">
+                                </picture>
+                            </div>
+                            <div class="courses__content ">
+                                <h4 class="courses__subtitle ">Скульптинг в ZBrush</h4>
+                                <p class="courses__descr ">
+                                    Разнообразный и богатый опыт говорит нам, что граница обучения кадров требует определения и уточнения прогресса профессионального сообщества! В частности, постоянный количественный рост и сфера нашей активности.
+                                </p>
+                                <a href="# " class="interactiv courses__link ">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer ">
+        <div class="footer-container ">
+            <div class="row g-0 ">
+                <div class="col-12 ">
+                    <ul class="footer__socials-list list-reset d-flex justify-content-center ">
+                        <li class="socials-list-item ">
+                            <a href="# " class="item-link " target="_blank">
+                                <svg width="24 " height="24 " viewbox="0 0 24 24 " fill="none " xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15.402 21V14.034H17.735L18.084 11.326H15.402V9.598C15.402 8.814 15.62 8.279 16.744 8.279H18.178V5.857C17.4838 5.78334 16.7861 5.74762 16.088 5.75C14.021 5.75 12.606 7.012 12.606 9.33V11.326H10.268V14.034H12.606V21H4C3.73478
+                        21 3.48043 20.8946 3.29289 20.7071C3.10536 20.5196 3 20.2652 3 20V4C3 3.73478 3.10536 3.48043 3.29289 3.29289C3.48043 3.10536 3.73478 3 4 3H20C20.2652 3 20.5196 3.10536 20.7071 3.29289C20.8946 3.48043 21 3.73478 21 4V20C21 20.2652
+                        20.8946 20.5196 20.7071 20.7071C20.5196 20.8946 20.2652 21 20 21H15.402Z " fill="white " />
+                </svg>
+
+                            </a>
+                        </li>
+                        <li class="socials-list-item ">
+                            <a href="# " class="item-link " target="_blank">
+                                <svg width=" 24 " height="24 " viewbox="0 0 24 24 " fill="none " xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M22.162 5.6569C21.3986 5.9946 20.589 6.21638 19.76 6.3149C20.6338 5.79234 21.2877 4.96992 21.6 4.0009C20.78 4.4889 19.881 4.8309 18.944 5.0159C18.3146 4.34248 17.4804 3.89587 16.571 3.74549C15.6616 3.59511 14.7279
+                        3.74939 13.9153 4.18436C13.1026 4.61932 12.4564 5.31059 12.0771 6.1507C11.6978 6.9908 11.6068 7.93268 11.818 8.8299C10.1551 8.74656 8.52834 8.31443 7.04329 7.56157C5.55825 6.80871 4.24813 5.75195 3.19801 4.4599C2.8263 5.09835 2.63096
+                        5.82413 2.63201 6.5629C2.63201 8.0129 3.37001 9.2939 4.49201 10.0439C3.82802 10.023 3.17864 9.84368 2.59801 9.5209V9.5729C2.59821 10.5386 2.93238 11.4745 3.54385 12.222C4.15533 12.9694 5.00649 13.4824 5.95301 13.6739C5.33662 13.8409
+                        4.69031 13.8656 4.06301 13.7459C4.32987 14.5771 4.85001 15.3041 5.5506 15.825C6.25118 16.3459 7.09714 16.6347 7.97001 16.6509C7.10249 17.3322 6.10918 17.8359 5.04689 18.1331C3.98459 18.4303 2.87413 18.5152 1.77901 18.3829C3.6907 19.6123
+                        5.9161 20.265 8.18901 20.2629C15.882 20.2629 20.089 13.8899 20.089 8.3629C20.089 8.1829 20.084 8.0009 20.076 7.8229C20.8949 7.23107 21.6016 6.49792 22.163 5.6579L22.162 5.6569Z "
+                    fill="white " />
+                </svg>
+                            </a>
+                        </li>
+                        <li class="socials-list-item ">
+                            <a href="# " class="item-link " target="_blank">
+                                <svg width=" 24 " height="24 " viewbox="0 0 24 24 " fill="none " xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M12 2C14.717 2 15.056 2.01 16.122 2.06C17.187 2.11 17.912 2.277 18.55 2.525C19.21 2.779 19.766 3.123 20.322 3.678C20.8305 4.1779 21.224 4.78259 21.475 5.45C21.722 6.087 21.89 6.813 21.94 7.878C21.987 8.944 22
+                        9.283 22 12C22 14.717 21.99 15.056 21.94 16.122C21.89 17.187 21.722 17.912 21.475 18.55C21.2247 19.2178 20.8311 19.8226 20.322 20.322C19.822 20.8303 19.2173 21.2238 18.55 21.475C17.913 21.722 17.187 21.89 16.122 21.94C15.056 21.987
+                        14.717 22 12 22C9.283 22 8.944 21.99 7.878 21.94C6.813 21.89 6.088 21.722 5.45 21.475C4.78233 21.2245 4.17753 20.8309 3.678 20.322C3.16941 19.8222 2.77593 19.2175 2.525 18.55C2.277 17.913 2.11 17.187 2.06 16.122C2.013 15.056 2 14.717
+                        2 12C2 9.283 2.01 8.944 2.06 7.878C2.11 6.812 2.277 6.088 2.525 5.45C2.77524 4.78218 3.1688 4.17732 3.678 3.678C4.17767 3.16923 4.78243 2.77573 5.45 2.525C6.088 2.277 6.812 2.11 7.878 2.06C8.944 2.013 9.283 2 12 2ZM12 7C10.6739 7 9.40215
+                        7.52678 8.46447 8.46447C7.52678 9.40215 7 10.6739 7 12C7 13.3261 7.52678 14.5979 8.46447 15.5355C9.40215 16.4732 10.6739 17 12 17C13.3261 17 14.5979 16.4732 15.5355 15.5355C16.4732 14.5979 17 13.3261 17 12C17 10.6739 16.4732 9.40215
+                        15.5355 8.46447C14.5979 7.52678 13.3261 7 12 7ZM18.5 6.75C18.5 6.41848 18.3683 6.10054 18.1339 5.86612C17.8995 5.6317 17.5815 5.5 17.25 5.5C16.9185 5.5 16.6005 5.6317 16.3661 5.86612C16.1317 6.10054 16 6.41848 16 6.75C16 7.08152 16.1317
+                        7.39946 16.3661 7.63388C16.6005 7.8683 16.9185 8 17.25 8C17.5815 8 17.8995 7.8683 18.1339 7.63388C18.3683 7.39946 18.5 7.08152 18.5 6.75ZM12 9C12.7956 9 13.5587 9.31607 14.1213 9.87868C14.6839 10.4413 15 11.2044 15 12C15 12.7956 14.6839
+                        13.5587 14.1213 14.1213C13.5587 14.6839 12.7956 15 12 15C11.2044 15 10.4413 14.6839 9.87868 14.1213C9.31607 13.5587 9 12.7956 9 12C9 11.2044 9.31607 10.4413 9.87868 9.87868C10.4413 9.31607 11.2044 9 12 9Z "
+                    fill="white " />
+                </svg>
+                            </a>
+                        </li>
+                        <li class="socials-list-item ">
+                            <a href="# " class="item-link " target="_blank">
+                                <svg width="24 " height="24 " viewbox="0 0 24 24 " fill="none " xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M21.543 6.498C22 8.28 22 12 22 12C22 12 22 15.72 21.543 17.502C21.289 18.487 20.546 19.262 19.605 19.524C17.896 20 12 20 12 20C12 20 6.107 20 4.395 19.524C3.45 19.258 2.708 18.484 2.457 17.502C2 15.72 2 12 2
+                        12C2 12 2 8.28 2.457 6.498C2.711 5.513 3.454 4.738 4.395 4.476C6.107 4 12 4 12 4C12 4 17.896 4 19.605 4.476C20.55 4.742 21.292 5.516 21.543 6.498ZM10 15.5L16 12L10 8.5V15.5Z "
+                    fill="white " />
+                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-12 d-flex justify-content-center ">
+                    <small class="footer__copy ">
+            SKILLBOX <a href="# " class="copy-link " target="_blank">®</a> 2021
+          </small>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
