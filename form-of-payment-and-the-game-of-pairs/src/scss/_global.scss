@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/RobotoMono-Light.woff'), format('woff');
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Roboto', serif;
+    margin: 0;
+    background-color: var(--color-mercury);
+    min-width: 320px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+}
+
+[disabled] {
+    opacity: .5;
+}
+
+.btn:focus {
+    outline: none;
+}
+
+input {
+    padding: 0;
+    border-color: transparent;
+}
+
+input:focus {
+    outline: none;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 30px;
+}

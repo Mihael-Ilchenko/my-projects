@@ -1,0 +1,59 @@
+.timer {
+    position: absolute;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 15px 25px;
+        background-color: $sulu;
+        border-radius: $size-radius;
+    }
+    &__descr {
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-size: 18px;
+    }
+    &__button {
+        background-color: $purple-heart;
+        padding: 10px 15px;
+        border-radius: $size-radius;
+        color: white;
+    }
+}
+
+.game-info {
+    position: absolute;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+        border-radius: $size-radius;
+    }
+    &__descr {
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-size: 22px;
+    }
+    &__button {
+        padding: 5px 15px;
+        border: 1px solid darkslategray;
+        border-radius: $size-radius;
+        animation: bounce 1s 3;
+    }
+    .success {
+        background-color: chartreuse;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1)
+    }
+    50% {
+        transform: scale(.7)
+    }
+    100% {
+        transform: scale(1)
+    }
+}
