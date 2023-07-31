@@ -1,0 +1,73 @@
+@import './header/nav';
+@import './header/burger';
+@import './header/catalogBurger';
+@import './header/search';
+@import './header/actions';
+@import './header/menu';
+.header {
+    margin-bottom: 14px;
+}
+
+.header-top {
+    background-color: $zircon;
+    padding: 10px 0;
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.header-bottom {
+    background-color: $white;
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        >*:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+}
+
+.action-mobile {
+    display: none;
+    visibility: hidden;
+}
+
+@media(max-width: 992px) {
+    .header-bottom {
+        &-container {
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+}
+
+@media(max-width: 768px) {
+    .header-top {
+        background-color: $white;
+        &-container {
+            // align-items: center;
+        }
+    }
+    .action-mobile {
+        display: block;
+        visibility: visible;
+    }
+    .action-desctop,
+    .catalogBurger-desktop {
+        display: none;
+        visibility: hidden;
+    }
+    .header-bottom {
+        padding: 10px 0;
+        &-container {
+            >*:not(:last-child) {
+                margin-right: 0;
+            }
+        }
+    }
+}

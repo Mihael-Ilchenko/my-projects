@@ -1,0 +1,176 @@
+@import './fonts';
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Rubik';
+    font-size: $main_fz;
+    background-color: $wildsand;
+    color: $mineshaft;
+    min-width: 320px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1420px;
+    padding: 0 50px;
+}
+
+.section {
+    margin-bottom: 50px;
+}
+
+.section-title {
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 24px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.link-reset {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link-reset:focus {
+    outline: none;
+}
+
+.list-reset {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+}
+
+.input-reset {
+    border: none;
+    padding: 0;
+    max-width: 100%;
+    font: inherit;
+}
+
+.input-reset:focus {
+    outline: none;
+}
+
+.btn-reset {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+}
+
+.btn-reset:focus-visible {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+.interaction_bright {
+    background-image: $blueRibbon;
+    box-shadow: $shadow;
+    transition: background-image $short, transform $short;
+}
+
+.interaction_bright:hover,
+.interaction_bright:focus {
+    background-image: $bright;
+}
+
+.interaction_bright:active {
+    transform: scale(.98)
+}
+
+.interaction_blue {
+    transition: color $short;
+}
+
+.interaction_blue:focus {
+    color: $blueRibbon;
+}
+
+.interaction_blue:focus path {
+    fill: currentColor
+}
+
+.interaction_blue:hover {
+    color: $blueRibbon;
+}
+
+.interaction_blue:hover path {
+    fill: $blueRibbon
+}
+
+.interaction_three {
+    background-color: $bright;
+    color: $white;
+    border-radius: 60px;
+    transition: all $short;
+}
+
+.interaction_three:hover {
+    background-color: linear-gradient(82.33deg, #9E0CAA 0.26%, #5156ec 47.35%, #23FBE1 111.53%), linear-gradient(44.66deg, #475cba 1.68%, #00FCDE 48.63%, #bb34fe 93.57%);
+}
+
+.interaction_three:active {
+    transform: scale(.98)
+}
+
+.interaction_three:focus {
+    background-color: $blueRibbon;
+}
+
+.foot-link {
+    transition: color $short;
+    &:focus,
+    &:hover {
+        color: $blueRibbon;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 25px;
+    }
+    .section-title {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    .section {
+        margin-bottom: 20px;
+    }
+}

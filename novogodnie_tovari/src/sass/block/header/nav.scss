@@ -1,0 +1,25 @@
+.nav {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: 14px;
+    }
+    &__item:not(:last-child) {
+        margin-right: 40px;
+    }
+    &__link {
+        transition: color $short;
+    }
+    &__link:hover,
+    &__link:active,
+    &__link:focus {
+        color: $blueRibbon;
+    }
+}
+
+@media(max-width: 768px) {
+    nav {
+        display: none;
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include(".//modules/head.html")
+
+<body>
+
+    @@include("modules/header.html")
+
+    <main>
+        <h1 class="visually-hidden">Новогодние товары</h1>
+        @@include("modules/hero.html") @@include("modules/garants.html") @@include("modules/catalog.html") @@include("modules/about.html") @@include("modules/scrollBtn.html")
+    </main>
+    @@include("modules/footer.html")
+
+    <script defer src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer src="./js/main.js" type="module"></script>
+</body>
+
+</html>

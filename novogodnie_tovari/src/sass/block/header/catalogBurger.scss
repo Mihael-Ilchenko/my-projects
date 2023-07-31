@@ -1,0 +1,19 @@
+.catalogBurger {
+    &__drop {
+        display: none;
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        color: $white;
+        border-radius: 60px;
+        font-weight: 500;
+        padding: 10px 24px;
+        >svg {
+            margin-right: 10px;
+        }
+        span {
+            padding-right: 30px;
+        }
+    }
+}

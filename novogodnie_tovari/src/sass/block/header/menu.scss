@@ -1,0 +1,60 @@
+.menu {
+    display: none;
+    visibility: hidden;
+    z-index: 10;
+    font-size: 10px;
+    &__drop {
+        display: none;
+    }
+    &__list {
+        padding-top: 40px;
+    }
+    &__item {
+        color: $white;
+    }
+    &__item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    &__link {
+        padding: 10px;
+        border-radius: $main_size-radius;
+        transition: background-color $short, color $short;
+    }
+    &__link:hover {
+        background-color: $white;
+        color: $blueRibbon;
+    }
+    &__close {
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        transition: color $short;
+    }
+    &__close:hover {
+        color: red;
+    }
+    &__close:focus,
+    &__close:active {
+        color: red;
+    }
+}
+
+.menu .menu_active {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: $bright;
+}
+
+.menu_active {
+    display: block;
+}
+
+@media(max-width: 768px) {
+    .menu {
+        display: block;
+        visibility: visible;
+    }
+}

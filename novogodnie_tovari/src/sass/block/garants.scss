@@ -1,0 +1,104 @@
+.garant {
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        overflow: hidden;
+        margin-bottom: 24px;
+    }
+    &__item:not(:last-child) {
+        margin-right: 24px;
+    }
+    &__item {
+        background: linear-gradient(331.63deg, #5877FE -3.97%, rgba(255, 255, 255, 0) 74.87%, rgba(255, 255, 255, 0) 74.87%), linear-gradient(35.39deg, #C2FFF8 -1.03%, #FFFFFF 69.8%);
+        border-radius: 40px;
+        min-height: 262px;
+        max-width: 244px;
+    }
+    &__bg {
+        height: 100%;
+    }
+    &__content {
+        padding: 24px;
+    }
+    &__title {
+        font-weight: 500;
+        font-size: $main_fz;
+        margin-bottom: 8px;
+    }
+    &__descr {
+        color: $emperror;
+        opacity: .6;
+        font-size: 14px;
+    }
+}
+
+.mrkplace-bg {
+    background-image: url('../img/wb.png') 100% 73% no-repeat, url('../img/ozon.png') 60% 100% no-repeat, url('../img/some.png') 3% 100% no-repeat, url('../img/mgmarket.png') 0% 68% no-repeat;
+}
+
+.work-bg {
+    background-image: url('../img/bank.png') 10% 100% no-repeat,
+}
+
+.price-bg {
+    background-image: url('../img/price.png') 100% 100% / 150px no-repeat,
+}
+
+.dost-bg {
+    background-image: url('../img/isuzu.png') 101% 100% no-repeat,
+}
+
+.sklad-bg {
+    background-image: url('../img/sklad.png') bottom center no-repeat,
+}
+
+@media (max-width: 768px) {
+    .garant {
+        &__item:not(:last-child) {
+            margin-right: 12px;
+        }
+        &__item {
+            margin-bottom: 12px;
+        }
+        &__title {
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        &__descr {
+            font-size: 10px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .garant {
+        &__item {
+            min-width: 100%;
+            min-height: 200px;
+        }
+        &__item {
+            margin-bottom: 0;
+        }
+        &__item:not(:last-child) {
+            margin-right: 0;
+            margin-bottom: 12px;
+        }
+    }
+    .mrkplace-bg {
+        background: url('../img/wb_c.png') 100% 73% no-repeat, url('../img/ozon_c.png') 60% 100%/70px no-repeat, url('../img/some_c.png') 3% 100%/50px no-repeat, url('../img/mgmarket_c.png') 0% 60%/120px no-repeat;
+    }
+    .work-bg {
+        background: url('../img/bank_c.png') 0 100%/150px no-repeat,
+    }
+    .price-bg {
+        background: url('../img/price_c.png') bottom center /120px no-repeat,
+    }
+    .dost-bg {
+        background: url('../img/isuzu_c.png') 102% 102%/150px no-repeat,
+    }
+    .sklad-bg {
+        background: url('../img/sklad_c.png') bottom center/150px no-repeat,
+    }
+}

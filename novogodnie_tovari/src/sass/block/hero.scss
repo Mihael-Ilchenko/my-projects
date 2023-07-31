@@ -1,0 +1,108 @@
+.hero {
+    .swiper {
+        filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.2));
+        &-slide {
+            width: auto;
+        }
+        &-pagination-bullet {
+            width: 12px;
+            height: 12px;
+        }
+        &-wrapper {
+            margin-bottom: 40px;
+        }
+    }
+    &__list {
+        margin-bottom: 15px;
+        list-style-type: disc;
+    }
+    &__item {
+        background-color: $white;
+        border-radius: 12px;
+        overflow: hidden;
+    }
+    &__item::marker {
+        font-size: 14px;
+    }
+    &__prod:not(:last-child) {
+        margin-bottom: 15px;
+    }
+    &__title {
+        color: $blueViolet;
+        margin-bottom: 16px;
+        font-size: 28px;
+        max-width: 70%;
+    }
+    &__content-container {
+        min-height: 300px;
+        margin: 0 30% 0 15%;
+        padding: 40px 0;
+        max-width: 55%;
+        background: url('../img/cristGrey.png') bottom right no-repeat;
+    }
+    &__link {
+        display: inline-block;
+        padding: 11px 24px;
+        font-weight: 500;
+    }
+}
+
+.branch {
+    background: url('../img/branchNotToys.png') top left no-repeat, url('../img/branchToys.png') top right no-repeat;
+}
+
+.crists {
+    background: url('../img/cristGray.png') 80% 100% no-repeat;
+}
+
+@media(max-width: 768px) {
+    .hero {
+        .swiper {
+            &-pagination-bullet {
+                width: 8px;
+                height: 8px;
+            }
+            &-wrapper {
+                margin-bottom: 0;
+            }
+        }
+        &__content-container {
+            min-height: 140px;
+            padding: 26px 0;
+            background-size: 100px 130px;
+            margin-right: 0;
+        }
+        &__list {
+            font-size: 10px;
+        }
+        &__prod:not(:last-child) {
+            margin-bottom: 5px;
+        }
+        &__title {
+            font-size: 16px;
+            margin-bottom: 5px;
+            max-width: 100%;
+        }
+        &__link {
+            font-size: 8px;
+            padding: 6px 12px;
+        }
+    }
+    .branch {
+        background: url('../img/mobile-branchNotToys.png') top left no-repeat, url('../img/mobile-branchToys.png') top right no-repeat;
+    }
+    .crists {
+        background-size: 100px 160px;
+    }
+}
+
+@media(max-width: 576px) {
+    .hero {
+        &__content-container {
+            max-width: 60%;
+        }
+    }
+    .crists {
+        background-position: 90% 100%;
+    }
+}
