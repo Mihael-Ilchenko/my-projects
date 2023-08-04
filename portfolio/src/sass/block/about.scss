@@ -1,0 +1,94 @@
+.about {
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__text {
+        margin-right: 20px;
+        max-width: 70%;
+    }
+    &__prev {
+        min-width: 210px;
+    }
+    .text {
+        font-size: 24px;
+    }
+    &__item {
+        span {
+            display: block;
+            margin-bottom: 10px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+    &__decor {
+        padding-left: 40px;
+    }
+}
+
+.subhead {
+    font-size: 20px;
+    &:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+.location {
+    background: url('../img/location.png') center left / 28px no-repeat
+}
+
+.go {
+    background: url('../img/go.png') center left no-repeat
+}
+
+.keyboard {
+    background: url('../img/keyboard.png') center left no-repeat
+}
+
+.dev {
+    background: url('../img/dev.png') center left no-repeat
+}
+
+.it {
+    background: url('../img/it.png') center left no-repeat
+}
+
+.age {
+    background: url('../img/age.png') center left/ 28px no-repeat
+}
+
+.obuchenie {
+    background: url('../img/obuchenie.png') center left no-repeat
+}
+
+@media(max-width: 768px) {
+    .about {
+        &__wrap {
+            flex-direction: column-reverse;
+        }
+        &__prev {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .about {
+        &__prev {
+            margin-bottom: 20px;
+        }
+        &__text {
+            margin-right: 0;
+            max-width: 100%;
+        }
+        .text {
+            font-size: 18px;
+            line-height: 150%;
+        }
+    }
+    .subhead {
+        font-size: 18px;
+    }
+}

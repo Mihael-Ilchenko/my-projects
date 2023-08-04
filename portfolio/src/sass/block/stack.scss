@@ -1,0 +1,25 @@
+.stack {
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__img {
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width: 576px) {
+    .stack {
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+}

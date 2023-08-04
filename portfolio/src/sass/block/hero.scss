@@ -1,0 +1,25 @@
+.hero {
+    &-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        >*:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+}
+
+@media(max-width: 576px) {
+    .hero {
+        &-container {
+            flex-direction: column;
+            >*:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+        }
+        &__descr {
+            text-align: center;
+        }
+    }
+}

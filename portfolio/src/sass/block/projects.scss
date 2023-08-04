@@ -1,0 +1,199 @@
+ .projects {
+     &-container {
+         position: relative;
+     }
+     &__item {
+         height: 100%;
+         border-radius: 30px;
+         background-color: $white;
+         width: auto;
+     }
+     .swiper {
+         &-wrapper {
+             padding-bottom: 50px;
+         }
+         &-button-prev,
+         &-button-next {
+             position: absolute;
+             top: 40%;
+             background-color: $mariner;
+             color: $white;
+             border-radius: 50%;
+             width: 50px;
+             height: 50px;
+             //  box-shadow: 0px 0px 33px rgba(54, 88, 172, 0.4);
+             transition: color $short, background-color $short;
+             &:hover,
+             &:focus {
+                 color: $mariner;
+                 background-color: $white;
+             }
+             svg {
+                 width: 20px;
+                 height: 20px;
+             }
+         }
+         &-button-next::after,
+         &-button-prev::after {
+             display: none;
+         }
+         &-button-prev {
+             left: 25px;
+             svg {
+                 margin-right: 5px;
+             }
+         }
+         &-button-next {
+             right: 25px;
+             svg {
+                 margin-left: 5px;
+             }
+         }
+         &-pagination-bullet {
+             width: 15px;
+             height: 15px;
+         }
+     }
+ }
+
+ .card {
+     &__container {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         height: 100%;
+     }
+     &__btn-group {
+         display: flex;
+         justify-content: center;
+         >*:not(:last-child) {
+             margin-right: 10px;
+         }
+     }
+     &__link {
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 22px;
+         background-color: $mariner;
+         color: $white;
+         font-weight: 600;
+         padding: 12px 24px;
+         //  width: 100%;
+         margin-bottom: 15px;
+         border-radius: 30px;
+         white-space: nowrap;
+         text-align: center;
+         transition: background-color $short, color $short;
+         svg {
+             margin-right: 10px;
+         }
+         &:hover,
+         &:focus {
+             background-color: $white;
+             color: $mariner;
+         }
+     }
+     &__prev {
+         border-radius: 30px;
+         width: 100%;
+     }
+     &__title {
+         font-weight: 400;
+         background-image: url("../img/proekt.png");
+         background-position: left top;
+         background-repeat: no-repeat;
+         padding-left: 45px;
+         margin-bottom: 15px;
+     }
+     &__descr {
+         font-size: 22px;
+         margin-bottom: 15px;
+     }
+     &__text {
+         position: relative;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         height: 100%;
+         padding: 15px 15px 0 15px;
+     }
+ }
+
+ @media(max-width: 1230px) {
+     .card {
+         &__btn-group {
+             flex-direction: column;
+         }
+         &__link {
+             justify-content: center;
+         }
+     }
+     @media(max-width: 992px) {
+         .projects {
+             .swiper {
+                 &-button-prev {
+                     left: 10px;
+                 }
+                 &-button-next {
+                     right: 10px;
+                 }
+             }
+         }
+     }
+     @media(max-width: 768px) {
+         .card {
+             &__btn-group {
+                 align-items: center;
+             }
+             &__link {
+                 font-size: 18px;
+             }
+         }
+         .projects {
+             &__list {
+                 grid-template-columns: 1fr;
+             }
+             .swiper {
+                 &-button-prev,
+                 &-button-next {
+                     width: 35px;
+                     height: 35px;
+                     svg {
+                         width: 14px;
+                         height: 14px;
+                     }
+                 }
+                 &-button-prev {
+                     left: 8px;
+                     svg {
+                         margin-right: 2px;
+                     }
+                 }
+                 &-button-next {
+                     right: 8px;
+                     svg {
+                         margin-left: 2px;
+                     }
+                 }
+             }
+         }
+     }
+ }
+
+ @media(max-width: 576px) {
+     .card {
+         &__link {
+             padding: 6px 12px;
+             font-size: 16px;
+         }
+         &__title {
+             background-size: 24px 24px;
+             padding-left: 35px;
+             font-size: 20px;
+         }
+         &__descr {
+             font-size: 18px;
+         }
+     }
+ }

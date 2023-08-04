@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include(".//modules/head.html")
+
+<body>
+
+    @@include("modules/header.html")
+
+    <main>
+        <h1 class="visually-hidden">Портфолио Михаила</h1>
+        @@include("modules/hero.html") @@include("modules/about.html") @@include("modules/education.html") @@include("modules/work.html") @@include("modules/stack.html") @@include("modules/tools.html") @@include("modules/projects.html") @@include("modules/other.html")
+        @@include("modules/scrollTop.html")
+    </main>
+    @@include("modules/footer.html")
+
+
+    <script defer src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script defer src="./js/main.js" type="module"></script>
+</body>
+
+</html>

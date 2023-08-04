@@ -1,0 +1,79 @@
+ .accordion-education {
+     .ac {
+         background-color: transparent;
+         border-color: $mariner;
+         border-radius: 30px;
+     }
+     .ac .ac-trigger::after {
+         display: none;
+     }
+     .ac .ac-trigger {
+         position: relative;
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         padding: 15px;
+         font-size: 24px;
+         &:focus {
+             color: $mariner;
+         }
+     }
+     .accordion__heading-decor {
+         position: relative;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         flex-shrink: 0;
+         padding-bottom: 2px;
+         width: 30px;
+         height: 30px;
+     }
+     .accordion__heading-decor::before {
+         content: "";
+         position: absolute;
+         width: 7px;
+         height: 7px;
+         background: transparent;
+         border-bottom: 1px solid currentColor;
+         border-right: 1px solid currentColor;
+         transform: rotate(45deg);
+         transition: all $short;
+     }
+     .is-active .accordion__heading-decor::before {
+         transform: rotate(225deg);
+     }
+     .is-active .accordion__heading .ac-trigger {
+         color: $blueRibbon;
+     }
+ }
+
+ .accordion {
+     &__content ul {
+         padding: 15px;
+         padding-left: 30px;
+         & li:not(:last-child) {
+             margin-bottom: 10px;
+         }
+     }
+     &__title {
+         font-size: 20px;
+         span {
+             font-weight: 400;
+         }
+     }
+     &__descr {
+         font-size: 18px;
+         font-weight: 600;
+         span {
+             font-weight: 400;
+         }
+     }
+ }
+
+ @media(max-width: 576px) {
+     .accordion-education {
+         .ac .ac-trigger {
+             font-size: 18px;
+         }
+     }
+ }
