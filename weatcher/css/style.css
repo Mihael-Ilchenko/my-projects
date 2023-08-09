@@ -1,0 +1,9 @@
+ @import './normalize.css';
+ @import './fonts.css';
+ @import './global.css';
+ @import './block/weather.css';
+ @import './block/search.css';
+ @import './block/values.css';
+ @import './block/smallBlock.css';
+ @import './block/choice.css';
+ @import './block/details.css';

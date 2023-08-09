@@ -1,0 +1,77 @@
+ .weather {
+     height: 100vh;
+     min-height: 720px;
+ }
+
+ .weather-wrap {
+     display: flex;
+     overflow: hidden;
+     min-height: 100%;
+ }
+
+ .weather-left {
+     width: 100%;
+     max-width: 460px;
+     min-width: 329px;
+     font-size: 18px;
+     align-self: stretch;
+ }
+
+ .weather-left__top {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 42px;
+     margin-bottom: 10px;
+ }
+
+ .weather-left__top>*:not(:last-child) {
+     margin-right: 10px;
+ }
+
+ .weather-right {
+     min-width: 505px;
+     max-width: 982px;
+ }
+
+ .weather-left-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     position: relative;
+     height: 100%;
+ }
+
+ .weather-right-container {
+     padding-left: 140px;
+     padding-right: 120px;
+ }
+ 
+ @media(max-width: 1439px) {
+     .weather-right-container {
+         padding-left: 75px;
+         padding-right: 75px;
+     }
+     .weather-left__top {
+         padding: 0 28px;
+     }
+ }
+
+ @media(max-width: 834px) {
+     .weather-wrap {
+         flex-direction: column;
+     }
+     .weather-left {
+         max-width: 100%;
+         min-width: 320px;
+     }
+ }
+
+ @media(max-width: 576px) {
+     .weather-right {
+         min-width: auto;
+     }
+     .weather-right-container {
+         padding: 50px 30px 95px;
+     }
+ }

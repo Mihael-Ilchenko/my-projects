@@ -1,0 +1,68 @@
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: auto;
+}
+
+.location img {
+    margin-right: 25px;
+}
+
+.card {
+    border-radius: 8px;
+    font-size: 14px;
+    min-width: 100px;
+}
+
+.card__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 14px;
+}
+
+.card__bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__bottom>*:not(:last-child) {
+    margin-right: 16px;
+}
+
+.card__data {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.card__img {
+    max-width: 100px;
+    margin: 0 auto;
+    margin-bottom: 4px;
+}
+
+.card__temperature {
+    text-align: center;
+}
+
+.theme-btn {
+    width: 64px;
+    height: 32px;
+    border: 2px solid var(--silver-chalice);
+    border-radius: 25px;
+    padding: 4px;
+    display: block;
+    color: var(--white);
+    transition: padding .2s linear
+}
+
+.theme-btn__switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    background-color: var(--abbey);
+    border-radius: 50%;
+}

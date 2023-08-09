@@ -1,0 +1,104 @@
+body {
+    color: var(--abbey);
+    background-color: var(--main-bg-color);
+}
+
+.choice__slider-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: var(--silver-chalice);
+    background-color: var(--white);
+}
+
+.choice__btn {
+    font-weight: var(--font-bold);
+    font-size: 20px;
+    padding: 3px 0;
+    white-space: nowrap;
+    border-bottom-style: solid;
+    border-bottom-width: 3px;
+    border-color: transparent;
+    color: var(--silver-chalice);
+}
+
+.choice__btn_active {
+    color: var(--abbey)!important;
+    border-color: var(--abbey);
+}
+
+.details-card__container {
+    background-color: var(--white);
+}
+
+.search {
+    background-color: var(--white);
+}
+
+.search__input {
+    border-radius: var(--main-radius);
+    height: 50px;
+    padding: 14px 14px 14px 45px;
+    font-weight: var(--font-medium);
+    border: 2px solid var(--silver-chalice);
+    width: 100%;
+    max-width: 250px;
+}
+
+.search__input::placeholder {
+    color: var(--abbey);
+}
+
+.search__submit {
+    border-radius: var(--main-radius);
+    padding: 12px 19px;
+    font-weight: var(--font-bold);
+    border: 2px solid var(--silver-chalice);
+}
+
+.search__svg {
+    color: var(--silver-chalice);
+}
+
+.location {
+    color: var(--silver-chalice);
+}
+
+.card {
+    background-color: var(--white);
+}
+
+.card__temperature-later {
+    color: var(--alto);
+}
+
+.values__img_dark {
+    display: none;
+}
+
+.values__data {
+    color: var(--silver-chalice);
+}
+
+.values__descr {
+    color: var(--silver-chalice);
+}
+
+.weather-left {
+    background-color: var(--white);
+}
+
+.weather__open {
+    align-self: flex-start;
+    padding: 15px 27px;
+    font-weight: 700;
+    border-width: 2px;
+    border-style: solid;
+    border-color: var(--silver-chalice);
+    border-radius: var(--main-radius);
+}
