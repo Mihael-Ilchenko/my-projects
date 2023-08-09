@@ -8,20 +8,21 @@
     padding: 10px 15px;
     background-color: $white;
     border-color: transparent;
-    box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 33px rgba(54, 88, 172, 0.4);
     border-radius: 50%;
     margin: auto;
     padding: 0;
     display: none;
     z-index: 50;
     transition: all $short;
+    color: $mariner;
     &:focus-visible {
         outline: none;
     }
     &:focus,
     &:hover {
-        box-shadow: 0px 0px 33px rgba(54, 88, 172, 0.4);
-        color: $mariner;
+        color: $white;
+        background-color: $mariner;
     }
 }
 
@@ -59,6 +60,7 @@
     margin-bottom: 20px;
     background-color: $gallery;
     box-shadow: 0px 0px 33px rgba(54, 88, 172, 0.4);
+    transition: background-color $short;
     &-container {
         display: flex;
         align-items: center;
@@ -107,6 +109,38 @@
 .work {
     &__descr {
         font-size: 24px;
+    }
+}
+
+.theme {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    width: 60px;
+    height: 30px;
+    border: 2px solid $mariner;
+    background-color: $mariner;
+    color: $white;
+    border-radius: 30px;
+    padding: 4px;
+    transition: padding $short, background-color $short, border-color $short;
+    box-shadow: 0px 0px 33px rgba(54, 88, 172, 0.4);
+    z-index: 20;
+    &:hover,
+    &:focus {
+        border-color: $mineshaft;
+    }
+    &__switch {
+        width: 20px;
+        height: 20px;
+        background-color: $mineshaft;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color $short, color $short;
     }
 }
 

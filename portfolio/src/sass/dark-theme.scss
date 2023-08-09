@@ -1,0 +1,44 @@
+@import './mystyles/variables';
+body {
+    background-color: $mineshaft;
+    color: $wildsand;
+}
+
+.theme {
+    padding-left: 32px;
+    background-color: transparent;
+    &:hover,
+    &:focus {
+        border-color: $white;
+    }
+    &__switch {
+        background-color: white;
+        color: $mariner;
+    }
+}
+
+.header {
+    background-color: $mineshaft;
+}
+
+.about {
+    .subhead::marker {
+        color: $mariner;
+    }
+}
+
+.accordion-education {
+    .accordion__heading .ac-trigger {
+        color: $white;
+    }
+}
+
+.projects {
+    &__item {
+        background-color: $emperror
+    }
+}
+
+.footer {
+    background-color: $mineshaft;
+}

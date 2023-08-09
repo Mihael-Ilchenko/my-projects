@@ -13,11 +13,10 @@ html {
 body {
     font-family: 'Rubik';
     font-size: $main_fz;
-    background-color: $wildsand;
-    color: $mineshaft;
     min-width: 320px;
     font-weight: 400;
     margin: 0;
+    transition: background-color $short, color $short;
 }
 
 .container {

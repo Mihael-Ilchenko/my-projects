@@ -1,6 +1,7 @@
 .footer {
     background-color: $gallery;
     box-shadow: 0px 0px 33px rgba(54, 88, 172, 0.4);
+    transition: background-color $short;
     &-container {
         display: flex;
         justify-content: center;

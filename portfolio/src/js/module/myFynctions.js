@@ -18,3 +18,35 @@ export function scrollTop() {
         });
     }
 }
+
+export const changeTheme = () => {
+    const btnTheme = document.getElementById('theme');
+    const srcTheme = document.getElementById('linkTheme');
+    let activeTheme = localStorage.getItem('theme');
+
+    btnTheme.addEventListener('click', () => {
+        if (btnTheme.dataset.theme == 'light') {
+            btnTheme.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark')
+        } else {
+            btnTheme.setAttribute('data-theme', 'light');
+            localStorage.setItem('theme', 'light')
+        }
+        applyTheme(btnTheme.dataset.theme);
+
+
+    })
+
+    function applyTheme(nameTheme) {
+        let urlTheme = `./css/${nameTheme}-theme.min.css`;
+        srcTheme.href = urlTheme;
+    }
+
+    if (activeTheme == null) {
+        applyTheme('light')
+    } else {
+        applyTheme(activeTheme)
+    }
+
+
+}
