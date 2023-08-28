@@ -22,10 +22,7 @@ const heroSwiper = new Swiper(".swiper", {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    speed: 1500,
-    // autoplay: {
-    //     delay: 4000,
-    // },
+    speed: 500,
     watchSlidesProgress: true,
     watchSlidesVisibility: true,
     a11y: false,
